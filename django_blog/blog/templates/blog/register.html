@@ -1,0 +1,21 @@
+
+<!-- register.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/stylesregister.css' %}">
+</head>
+<body>
+    <h1 style="color: #4b79a1;">Register</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
